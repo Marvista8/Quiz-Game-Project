@@ -32,4 +32,4 @@ As a Boot Camp Instructor. I wish to creat a timed quiz on CSS fundamentals that
 -   https://www.w3schools.com/js/js_popup.asp
 -   https://www.w3schools.com/js/js_timing.asp
 -   https://www.w3schools.com/js/js_json_parse.asp
--   https://www.w3schools.com/js/js_json_stringify.aspgit
+-   https://www.w3schools.com/js/js_json_stringify.asp
