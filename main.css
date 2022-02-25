@@ -1,0 +1,23 @@
+.welcome {
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #btnStart {
+     margin: 20px;
+     padding: 20px 25px;
+     width: 100px;
+ }
+ .flexbox {
+     flex-direction: column;
+     margin: 25rem;
+     justify-content: center;
+     align-items: center;
+ }
