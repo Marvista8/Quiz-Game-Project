@@ -1,14 +1,27 @@
-.welcome {
-    border: 1px solid black;
-    margin: auto;
-    width: 600px;
-    height: 300px;
-    padding: 10px;
+body, html {
+    height: 100%;
+}
+
+body {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+#welcome {
+    border: 1px solid black;
+    text-align: center;
+    width: 500px;
+    height: 250px;
+    padding: 50px;
+    margin: 40px 0px;
  }
+#start-quiz {
+    margin: 100px 0px;
+    padding: 15px 20px;
+ }
+
  #btnBegin {
      margin: 20px;
      padding: 20px 25px;
@@ -20,4 +33,20 @@
      justify-content: center;
      align-items: center;
      width: 50%;
+ }
+
+ p {
+     padding: 20px;
+ }
+
+ .question {
+     color: black;
+ }
+
+ .answer {
+     color: blue;
+ }
+ div.answer:hover, div.answer:active {
+     color: white;
+     background-color: blue;
  }

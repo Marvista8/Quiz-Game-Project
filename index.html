@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="/styles.css">
-        <script defer src="/Index.js"></script>
-        <title>Quiz Game</title>
-    </head>
-    <body>
-        <div class="flexbox">
-            <div class="welcome">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, sequi?</p>
-                <button id="btnBegin">start</button>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="/index.css" />
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+    <div id="titleSection" class="left">Quiz</div>
+    <div id="game-board" class="middle row">
+        <div id="welcome" class="">
+            <div>
+                <span>Test your front end developer skills by answering the following questions.</span>
+            </div>
+            <div>
+                <button id="start-quiz" onclick="doGame();">Begin</button>
             </div>
         </div>
-    </body>
+        <br />
+        <div id="questions" class="questions hide">
+        </div>
+        <div id="enterHighScore" class="hide">
+            <div>Save Your Score</div>
+            <label for="tbInitials">Enter your Initials</label>
+            <input type="text" id="tbInitials" placeholder="Initials here">
+            <button id="bEnterHighScore" onclick="addScore();">Submit</button>
+        </div>
+        <div id="high-scores" class="hide">
+            <div>High Scores</div>
+        </div>
+
+    </div>
+    <div id="score-board" class="hide">
+        <div id="timerContainer" class="">Seconds Remaining: <span id="timer"></span></div>
+        <div id="scoreContainer" class="">Score: <span id="score"></span></div>
+    </div>
+</body>
+
 </html>
