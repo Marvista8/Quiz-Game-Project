@@ -487,6 +487,7 @@ function showHighScores() {
     let tableheader0 = document.createElement('th');
     let tableheader1 = document.createElement('th');
     let tableheader2 = document.createElement('th');
+    let tableData = document.createElement("td");
 
 
     tableheader0.innerText = 'Rank';
@@ -497,12 +498,13 @@ function showHighScores() {
     tableRowHeader.appendChild(tableheader2);
     table.appendChild(tableRowHeader);
 
+
     let hScores = localStorage.getItem(highScoreKey) 
     ? JSON.parse(localStorage.getItem(highScoreKey))
     : [];
 
+
     //remove this line when you have updated the code.
-    alert('Update the code to show the high scores in a table');
 
     let i=0;
     while(i<hScores.length ) {
@@ -512,10 +514,14 @@ function showHighScores() {
         i++;
     }
 
+
     highScoresDiv.appendChild(table);
     highScoresDiv.classList.remove('hide');
 
+    console.log("highScoresDiv: ", highScoresDiv);
+
     document.getElementById('enterHighScore').classList.add('hide');
     document.getElementById('score-board').classList.add('hide');
+
 }
 
