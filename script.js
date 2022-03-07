@@ -488,6 +488,7 @@ function showHighScores() {
     let tableheader1 = document.createElement('th');
     let tableheader2 = document.createElement('th');
     let tableRow1 = document.createElement('tr');
+    let tableRow2 = document.createElement('tr');
     let rankRow = document.createElement('td');
     let scoreRow = document.createElement('td');
     let initialRow = document.createElement('td');
@@ -502,8 +503,12 @@ function showHighScores() {
     tableRow1.appendChild(rankRow);
     tableRow1.appendChild(scoreRow);
     tableRow1.appendChild(initialRow);
+    tableRow2.appendChild(rankRow);
+    tableRow2.appendChild(scoreRow);
+    tableRow2.appendChild(initialRow);
     table.appendChild(tableRowHeader);
     table.appendChild(tableRow1);
+    table.appendChild(tableRow2);
 
 
     let hScores = localStorage.getItem(highScoreKey) 
@@ -515,7 +520,7 @@ function showHighScores() {
 
     let i=0;
     while(i<hScores.length ) {
-        console.log("[i]");
+        console.log("hScores[i]");
         console.log("hScores[i].score: ", hScores[i].score);
         console.log("hScores[i].initals: ", hScores[i].initials);
         rankRow.innerText = [i];
