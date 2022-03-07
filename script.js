@@ -487,7 +487,6 @@ function showHighScores() {
     let tableheader0 = document.createElement('th');
     let tableheader1 = document.createElement('th');
     let tableheader2 = document.createElement('th');
-    let tableData = document.createElement("td");
 
 
     tableheader0.innerText = 'Rank';
