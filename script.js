@@ -487,7 +487,11 @@ function showHighScores() {
     let tableheader0 = document.createElement('th');
     let tableheader1 = document.createElement('th');
     let tableheader2 = document.createElement('th');
-
+    let tableRow1 = document.createElement('tr');
+    let rankRow = document.createElement('td');
+    let scoreRow = document.createElement('td');
+    let initialRow = document.createElement('td');
+   
 
     tableheader0.innerText = 'Rank';
     tableheader1.innerText = 'Score';
@@ -495,7 +499,11 @@ function showHighScores() {
     tableRowHeader.appendChild(tableheader0);
     tableRowHeader.appendChild(tableheader1);
     tableRowHeader.appendChild(tableheader2);
+    tableRow1.appendChild(rankRow);
+    tableRow1.appendChild(scoreRow);
+    tableRow1.appendChild(initialRow);
     table.appendChild(tableRowHeader);
+    table.appendChild(tableRow1);
 
 
     let hScores = localStorage.getItem(highScoreKey) 
@@ -507,8 +515,12 @@ function showHighScores() {
 
     let i=0;
     while(i<hScores.length ) {
+        console.log("[i]");
         console.log("hScores[i].score: ", hScores[i].score);
         console.log("hScores[i].initals: ", hScores[i].initials);
+        rankRow.innerText = [i];
+        scoreRow.innerText = hScores[i].score;
+        initialRow.innerText = hScores[i].initials;
         //update here to add array values to the table.
         i++;
     }
@@ -518,7 +530,7 @@ function showHighScores() {
     highScoresDiv.classList.remove('hide');
 
     console.log("highScoresDiv: ", highScoresDiv);
-
+ 
     document.getElementById('enterHighScore').classList.add('hide');
     document.getElementById('score-board').classList.add('hide');
 
